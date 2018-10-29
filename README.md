@@ -25,6 +25,14 @@ $ cabal install simple-affine-space
 
 This library is used by [Yampa](https://github.com/ivanperez-keera/Yampa).
 
+## Help and collaboration
+
+You can collaborate at least in three ways:
+
+* File an issue (https://github.com/ivanperez-keera/simple-affine-space/issues).
+* Contribute to an existing issue, especially one designed for newcomers (https://github.com/ivanperez-keera/simple-affine-space/issues).
+* Write documentation (send a link and/or a pull request).
+
 ## Authors
 
 This work is based off the original implementation of Yampa, by:
