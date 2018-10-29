@@ -10,6 +10,21 @@ A library implementing affine and vector spaces, with simple instances.
 This library has been designed to have minimal dependencies. It only requires
 base and deepseq.
 
+
+## Installation
+
+The library simple-affine-space is available on hackage: http://hackage.haskell.org/package/simple-affine-space.
+
+```
+$ cabal sandbox init         # Optional, but recommended
+$ cabal update
+$ cabal install simple-affine-space
+```
+
+## Usage
+
+This library is used by [Yampa](https://github.com/ivanperez-keera/Yampa).
+
 ## Authors
 
 This work is based off the original implementation of Yampa, by:
