@@ -1,4 +1,6 @@
-2018-10-28 Ivan Perez <ivan.perez@keera.co.uk>
+2018-10-31 Ivan Perez <ivan.perez@keera.co.uk>
+        * Added basic travis setup.
+        * Added documentation (README), link to Yampa.
         * Version imported from Yampa.
 
 Copyright (c) 2003, Henrik Nilsson, Antony Courtney and Yale University.
