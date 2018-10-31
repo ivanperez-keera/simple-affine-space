@@ -69,4 +69,4 @@ test-suite haddock-coverage
 
 source-repository head
   type:     git
-  location: git://github.com/ivanperez-keera/simple-vector-space.git
+  location: git://github.com/ivanperez-keera/simple-affine-space.git
