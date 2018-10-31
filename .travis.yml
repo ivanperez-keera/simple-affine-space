@@ -11,6 +11,8 @@ ghc:
   - "8.2.2"
   - "8.4.4"
 
+before_install:
+  - travis_retry sudo apt-get install alex happy
 install:
   - travis_retry cabal install --enable-tests --only-dependencies
 
