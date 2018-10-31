@@ -9,7 +9,13 @@ homepage: http://www.haskell.org/haskellwiki/Yampa
 category: Reactivity, FRP
 synopsis: A simple library for affine and vector spaces.
 
-description:  Affine spaces and vector spaces with a few basic instances.
+description:
+  Affine spaces and vector spaces with a few basic instances.
+  .
+  This library implements affine spaces and vector spaces. Two instances are
+  provided for affine spaces (points) and two more for vector spaces (vectors).
+  These definitions are strict, implement deepseq, and are designed to have
+  minimal memory overhead.
 
 build-type: Simple
 extra-source-files:
@@ -18,13 +24,13 @@ extra-source-files:
 -- You can disable the hlint test suite with -f-test-hlint
 flag test-hlint
   Description: Enable hlint test suite
-  default: False
+  default: True
   manual: True
 
 -- You can disable the haddock coverage test suite with -f-test-doc-coverage
 flag test-doc-coverage
   Description: Enable haddock coverage test suite
-  default: False
+  default: True
   manual: True
 
 library
@@ -69,4 +75,4 @@ test-suite haddock-coverage
 
 source-repository head
   type:     git
-  location: git://github.com/ivanperez-keera/simple-vector-space.git
+  location: git://github.com/ivanperez-keera/simple-affine-space.git
