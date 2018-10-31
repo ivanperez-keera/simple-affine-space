@@ -9,7 +9,13 @@ homepage: http://www.haskell.org/haskellwiki/Yampa
 category: Reactivity, FRP
 synopsis: A simple library for affine and vector spaces.
 
-description:  Affine spaces and vector spaces with a few basic instances.
+description:
+  Affine spaces and vector spaces with a few basic instances.
+  .
+  This library implements affine spaces and vector spaces. Two instances are
+  provided for affine spaces (points) and two more for vector spaces (vectors).
+  These definitions are strict, implement deepseq, and are designed to have
+  minimal memory overhead.
 
 build-type: Simple
 extra-source-files:
