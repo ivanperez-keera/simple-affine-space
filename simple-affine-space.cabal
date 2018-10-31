@@ -24,13 +24,13 @@ extra-source-files:
 -- You can disable the hlint test suite with -f-test-hlint
 flag test-hlint
   Description: Enable hlint test suite
-  default: False
+  default: True
   manual: True
 
 -- You can disable the haddock coverage test suite with -f-test-doc-coverage
 flag test-doc-coverage
   Description: Enable haddock coverage test suite
-  default: False
+  default: True
   manual: True
 
 library
