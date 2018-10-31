@@ -1,0 +1,37 @@
+# The following enables several GHC versions to be tested; often it's enough to
+# test only against the last release in a major GHC version. Feel free to omit
+# lines listings versions you don't need/want testing for.
+language: haskell
+
+ghc:
+  - "7.6.3"
+  - "7.8.4"
+  - "7.10.3"
+  - "8.0.2"
+  - "8.2.2"
+  - "8.4.4"
+
+install:
+  - travis_retry cabal install --enable-tests --only-dependencies
+
+script:
+  - travis_retry cabal install --enable-tests -j1
+
+after_script:
+  - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install --run-tests -j1 ; fi
+
+branches:
+    only:
+          - master
+          - /^develop.*$/
+          - /^hotfix.*$/
+          - /^release.*$/
+
+deploy:
+  provider: hackage
+  username: keera_studios_ci
+  password:
+    secure: "KcBo/lJJEzjW8zgMGLEJ8mWimdr6HQgGTv8n5UX74KzUQ6qEDoo+2bIbJryUZPbKDhW4SKLhsOQ8ZkHx8UhZHbTH6H3942pel8kcxhi48Hc7iIbcxpZo2e/tYKGsC8kWh4rb0pzuV+AP7Qnt4UwHg0qdbxiCT078/DEbkWUGNJqkLaOuJJCxL+DAOD4hl6+l1lXITXp11wtKdwbFfMiex+leFjIqO6dWKuqkfKdmYpB/PCIPzxpYVu1CwRdbH2zBCN+dfyY1jIvgpdPCYGT3spiQNazWFIABIc+jXOc5IHY6cxhnjCrJPctGH5gMFJcn+ov/fWKJtubVl3pR/2UI+PVDZqy22Y2eGLoplurODm0CtNPyz+xFYcMi/XHdccvN2x4jLNdFjFs0545Fafs87k1kCmCdRZQgXyX42ijtGctNwIASAaDahpkFvTB+g1EJ6g6zkU6mcFE1309hZNjgtCOMDZKNX3k4TUxIEo9zz0Wpw1tXqe0ubWtYAQCzNvoeuGmYRjypihoNgJORju9CAkA7+EKeDqDyQd/DfxCF7EnRFHOy2Kb287bf5PcVe/nkgdztx8b0uGjlsDSxdzA9v/ElWdiJ75fXFx73qfC2bLpr4ZWuNQIhLc/okHEdBZ7qPDd7GbyaOgNtg3bF3YeXzRRf/+vowwjmcDse26SRs1k="
+  on:
+    branch: master
+    condition: ${TRAVIS_HASKELL_VERSION}=8.4.4
