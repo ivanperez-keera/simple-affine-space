@@ -1,3 +1,8 @@
+2020-04-28 Ivan Perez <ivan.perez@keera.co.uk>
+        * Document combination with other vector libraries (#13), by @walseb.
+        * Remove unnecessary GHC extension (#10), by @turion.
+        * Version bump (0.1.1) (#12).
+
 2018-10-31 Ivan Perez <ivan.perez@keera.co.uk>
         * Added basic travis setup.
         * Added documentation (README), link to Yampa.
