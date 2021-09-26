@@ -16,9 +16,8 @@ base and deepseq.
 The library simple-affine-space is available on hackage: http://hackage.haskell.org/package/simple-affine-space.
 
 ```
-$ cabal sandbox init         # Optional, but recommended
 $ cabal update
-$ cabal install simple-affine-space
+$ cabal install --lib simple-affine-space
 ```
 
 ## Usage
