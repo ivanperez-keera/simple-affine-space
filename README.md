@@ -43,4 +43,3 @@ This work is based off the original implementation of Yampa, by:
 ### Maintainer
 
 * Ivan Perez
-* Christina Zeller
