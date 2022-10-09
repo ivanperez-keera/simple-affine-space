@@ -1,5 +1,6 @@
 2022-10-09 Ivan Perez <ivan.perez@keera.co.uk>
         * Move type constraints to default methods (#17).
+        * Enable compilation with GHC 8.6-9.0 (#18).
 
 2020-04-28 Ivan Perez <ivan.perez@keera.co.uk>
         * Document combination with other vector libraries (#13), by @walseb.
