@@ -1,3 +1,6 @@
+2022-10-09 Ivan Perez <ivan.perez@keera.co.uk>
+        * Move type constraints to default methods (#17).
+
 2020-04-28 Ivan Perez <ivan.perez@keera.co.uk>
         * Document combination with other vector libraries (#13), by @walseb.
         * Remove unnecessary GHC extension (#10), by @turion.
