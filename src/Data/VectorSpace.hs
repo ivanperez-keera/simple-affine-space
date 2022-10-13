@@ -1,4 +1,5 @@
 {-# LANGUAGE FunctionalDependencies, FlexibleInstances #-}
+{-# LANGUAGE DefaultSignatures #-}
 -----------------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.VectorSpace
@@ -56,7 +57,7 @@ infixl 6 ^+^, ^-^
 --   The encoding uses a type class |VectorSpace| @v a@, where @v@ represents
 --   the type of the vectors and @a@ represents the types of the scalars.
 
-class (Eq a, Floating a) => VectorSpace v a | v -> a where
+class VectorSpace v a | v -> a where
     -- | Vector with no magnitude (unit for addition).
     zeroVector :: v
 
@@ -65,6 +66,7 @@ class (Eq a, Floating a) => VectorSpace v a | v -> a where
 
     -- | Division by a scalar.
     (^/) :: v -> a -> v
+    default (^/) :: Fractional a => v -> a -> v
     v ^/ a = (1/a) *^ v
 
     -- | Vector addition
@@ -77,6 +79,7 @@ class (Eq a, Floating a) => VectorSpace v a | v -> a where
     -- | Vector negation. Addition with a negated vector should be
     --   same as subtraction.
     negateVector :: v -> v
+    default negateVector :: Num a => v -> v
     negateVector v = (-1) *^ v
 
     -- | Dot product (also known as scalar or inner product).
@@ -95,11 +98,13 @@ class (Eq a, Floating a) => VectorSpace v a | v -> a where
     -- For a vector represented mathematically as @a = a1,a2,...,an@, the norm
     -- is the square root of @a1^2 + a2^2 + ... + an^2@.
     norm :: v -> a
+    default norm :: Floating a => v -> a
     norm v = sqrt (v `dot` v)
 
     -- | Return a vector with the same origin and orientation (angle), but such
     -- that the norm is one (the unit for multiplication by a scalar).
     normalize    :: v -> v
+    default normalize :: (Eq a, Floating a) => v -> v
     normalize v = if nv /= 0 then v ^/ nv else error "normalize: zero vector"
         where nv = norm v
 

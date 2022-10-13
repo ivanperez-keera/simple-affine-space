@@ -10,10 +10,14 @@ ghc:
   - "8.0.2"
   - "8.2.2"
   - "8.4.4"
+  - "8.6.5"
+  - "8.8.4"
+  - "8.10.4"
+  - "9.0.1"
 
-before_install:
-  - travis_retry sudo apt-get install alex happy
 install:
+  - travis_retry cabal install alex happy
+  - export PATH="$HOME/.cabal/bin:$PATH"
   - travis_retry cabal install --enable-tests --only-dependencies
 
 script:

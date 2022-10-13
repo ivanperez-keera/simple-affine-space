@@ -1,3 +1,8 @@
+2022-10-12 Ivan Perez <ivan.perez@keera.co.uk>
+        * Version bump (0.2) (#19).
+        * Move type constraints to default methods (#17).
+        * Enable compilation with GHC 8.6-9.0 (#18).
+
 2020-04-28 Ivan Perez <ivan.perez@keera.co.uk>
         * Document combination with other vector libraries (#13), by @walseb.
         * Remove unnecessary GHC extension (#10), by @turion.
