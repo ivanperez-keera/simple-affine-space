@@ -22,8 +22,10 @@ module Data.Point2 (
     point2Y     -- :: RealFloat a => Point2 a -> a
 ) where
 
+-- External imports
 import Control.DeepSeq (NFData(..))
 
+-- Internal imports
 import Data.VectorSpace ()
 import Data.AffineSpace
 import Data.Vector2
