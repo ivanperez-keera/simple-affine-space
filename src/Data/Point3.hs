@@ -1,4 +1,4 @@
-{-# LANGUAGE ExistentialQuantification, MultiParamTypeClasses, FlexibleInstances, StandaloneDeriving #-}
+{-# LANGUAGE ExistentialQuantification, FlexibleInstances, MultiParamTypeClasses, StandaloneDeriving #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
 -----------------------------------------------------------------------------------------
 -- |
