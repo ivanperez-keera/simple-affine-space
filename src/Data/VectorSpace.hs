@@ -36,7 +36,6 @@
 -- improved performance linear brings while keeping a simple type class
 -- interface with few dependencies.
 -----------------------------------------------------------------------------------------
-
 module Data.VectorSpace where
 
 infixr *^
