@@ -53,10 +53,10 @@ point2Y (Point2 _ y) = y
 -- * Affine space instance
 
 instance RealFloat a => AffineSpace (Point2 a) (Vector2 a) a where
-    origin = Point2 0 0
+  origin = Point2 0 0
 
-    (Point2 x y) .+^ v = Point2 (x + vector2X v) (y + vector2Y v)
+  (Point2 x y) .+^ v = Point2 (x + vector2X v) (y + vector2Y v)
 
-    (Point2 x y) .-^ v = Point2 (x - vector2X v) (y - vector2Y v)
+  (Point2 x y) .-^ v = Point2 (x - vector2X v) (y - vector2Y v)
 
-    (Point2 x1 y1) .-. (Point2 x2 y2) = vector2 (x1 - x2) (y1 - y2)
+  (Point2 x1 y1) .-. (Point2 x2 y2) = vector2 (x1 - x2) (y1 - y2)
