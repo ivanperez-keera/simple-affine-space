@@ -58,6 +58,7 @@ infixl 6 ^+^, ^-^
 --   the type of the vectors and @a@ represents the types of the scalars.
 
 class VectorSpace v a | v -> a where
+
   -- | Vector with no magnitude (unit for addition).
   zeroVector :: v
 
