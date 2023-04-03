@@ -106,7 +106,8 @@ class VectorSpace v a | v -> a where
   normalize :: v -> v
   default normalize :: (Eq a, Floating a) => v -> v
   normalize v = if nv /= 0 then v ^/ nv else error "normalize: zero vector"
-    where nv = norm v
+    where
+      nv = norm v
 
 -- | Vector space instance for 'Float's, with 'Float' scalars.
 instance VectorSpace Float Float where
