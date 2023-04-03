@@ -113,9 +113,11 @@ instance RealFloat a => VectorSpace (Vector3 a) a where
 
   negateVector (Vector3 x y z) = (Vector3 (-x) (-y) (-z))
 
-  (Vector3 x1 y1 z1) ^+^ (Vector3 x2 y2 z2) = Vector3 (x1+x2) (y1+y2) (z1+z2)
+  (Vector3 x1 y1 z1) ^+^ (Vector3 x2 y2 z2) =
+    Vector3 (x1 + x2) (y1 + y2) (z1 + z2)
 
-  (Vector3 x1 y1 z1) ^-^ (Vector3 x2 y2 z2) = Vector3 (x1-x2) (y1-y2) (z1-z2)
+  (Vector3 x1 y1 z1) ^-^ (Vector3 x2 y2 z2) =
+    Vector3 (x1 - x2) (y1 - y2) (z1 - z2)
 
   (Vector3 x1 y1 z1) `dot` (Vector3 x2 y2 z2) = x1 * x2 + y1 * y2 + z1 * z2
 
