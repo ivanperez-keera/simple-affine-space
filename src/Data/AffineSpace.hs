@@ -12,7 +12,6 @@
 -- Affine space type relation.
 --
 -----------------------------------------------------------------------------------------
-
 module Data.AffineSpace where
 
 import Data.VectorSpace
