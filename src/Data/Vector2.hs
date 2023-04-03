@@ -13,7 +13,6 @@
 -- 2D vector abstraction (R^2).
 --
 -----------------------------------------------------------------------------------------
-
 module Data.Vector2 (
     Vector2,            -- Abstract, instance of VectorSpace
     vector2,            -- :: RealFloat a => a -> a -> Vector2 a
