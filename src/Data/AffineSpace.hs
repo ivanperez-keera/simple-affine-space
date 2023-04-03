@@ -34,17 +34,17 @@ infix 6 .+^, .-^, .-.
 class (Floating a, VectorSpace v a) => AffineSpace p v a | p -> v, v -> a where
 
   -- | Origin of the affine space.
-  origin   :: p
+  origin :: p
 
   -- | Addition of affine point and vector.
-  (.+^)    :: p -> v -> p
+  (.+^) :: p -> v -> p
 
   -- | Subtraction of affine point and vector.
-  (.-^)    :: p -> v -> p
+  (.-^) :: p -> v -> p
   p .-^ v = p .+^ (negateVector v)
 
   -- | Subtraction of two points in the affine space, giving a vector.
-  (.-.)    :: p -> p -> v
+  (.-.) :: p -> p -> v
 
   -- | Distance between two points in the affine space, same as the 'norm' of
   -- the vector they form (see '(.-.)'.
