@@ -41,7 +41,7 @@ class (Floating a, VectorSpace v a) => AffineSpace p v a | p -> v, v -> a where
 
   -- | Subtraction of affine point and vector.
   (.-^) :: p -> v -> p
-  p .-^ v = p .+^ (negateVector v)
+  p .-^ v = p .+^ negateVector v
 
   -- | Subtraction of two points in the affine space, giving a vector.
   (.-.) :: p -> p -> v
