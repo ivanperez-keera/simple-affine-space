@@ -1,5 +1,5 @@
-{-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
 {-# LANGUAGE ExistentialQuantification, MultiParamTypeClasses, FlexibleInstances, StandaloneDeriving #-}
+{-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
 -----------------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Point2
