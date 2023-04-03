@@ -13,7 +13,6 @@
 -- 3D vector abstraction (R^3).
 --
 -----------------------------------------------------------------------------------------
-
 module Data.Vector3 (
     Vector3,            -- Abstract, instance of VectorSpace
     vector3,            -- :: RealFloat a => a -> a -> a -> Vector3 a
