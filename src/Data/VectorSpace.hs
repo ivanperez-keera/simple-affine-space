@@ -140,7 +140,6 @@ instance VectorSpace Double Double where
 
   x1 `dot` x2 = x1 * x2
 
-
 -- | Vector space instance for pairs of 'Floating' point numbers.
 instance (Eq a, Floating a) => VectorSpace (a, a) a where
   zeroVector = (0, 0)
