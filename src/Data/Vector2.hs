@@ -88,19 +88,19 @@ vector2RhoTheta v = (vector2Rho v, vector2Theta v)
 -- * Vector space instance
 
 instance RealFloat a => VectorSpace (Vector2 a) a where
-    zeroVector = Vector2 0 0
+  zeroVector = Vector2 0 0
 
-    a *^ (Vector2 x y) = Vector2 (a * x) (a * y)
+  a *^ (Vector2 x y) = Vector2 (a * x) (a * y)
 
-    (Vector2 x y) ^/ a = Vector2 (x / a) (y / a)
+  (Vector2 x y) ^/ a = Vector2 (x / a) (y / a)
 
-    negateVector (Vector2 x y) = (Vector2 (-x) (-y))
+  negateVector (Vector2 x y) = (Vector2 (-x) (-y))
 
-    (Vector2 x1 y1) ^+^ (Vector2 x2 y2) = Vector2 (x1 + x2) (y1 + y2)
+  (Vector2 x1 y1) ^+^ (Vector2 x2 y2) = Vector2 (x1 + x2) (y1 + y2)
 
-    (Vector2 x1 y1) ^-^ (Vector2 x2 y2) = Vector2 (x1 - x2) (y1 - y2)
+  (Vector2 x1 y1) ^-^ (Vector2 x2 y2) = Vector2 (x1 - x2) (y1 - y2)
 
-    (Vector2 x1 y1) `dot` (Vector2 x2 y2) = x1 * x2 + y1 * y2
+  (Vector2 x1 y1) `dot` (Vector2 x2 y2) = x1 * x2 + y1 * y2
 
 
 -- * Additional operations
