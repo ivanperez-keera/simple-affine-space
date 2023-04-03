@@ -103,7 +103,7 @@ class VectorSpace v a | v -> a where
 
   -- | Return a vector with the same origin and orientation (angle), but such
   -- that the norm is one (the unit for multiplication by a scalar).
-  normalize    :: v -> v
+  normalize :: v -> v
   default normalize :: (Eq a, Floating a) => v -> v
   normalize v = if nv /= 0 then v ^/ nv else error "normalize: zero vector"
     where nv = norm v
