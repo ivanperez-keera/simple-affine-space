@@ -94,7 +94,7 @@ instance RealFloat a => VectorSpace (Vector2 a) a where
 
   (Vector2 x y) ^/ a = Vector2 (x / a) (y / a)
 
-  negateVector (Vector2 x y) = (Vector2 (-x) (-y))
+  negateVector (Vector2 x y) = Vector2 (-x) (-y)
 
   (Vector2 x1 y1) ^+^ (Vector2 x2 y2) = Vector2 (x1 + x2) (y1 + y2)
 
