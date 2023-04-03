@@ -100,7 +100,6 @@ instance RealFloat a => VectorSpace (Vector2 a) a where
 
   (Vector2 x1 y1) `dot` (Vector2 x2 y2) = x1 * x2 + y1 * y2
 
-
 -- * Additional operations
 
 -- | Rotates a vector with a given angle.
