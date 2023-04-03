@@ -1,5 +1,6 @@
 {-# LANGUAGE DefaultSignatures #-}
-{-# LANGUAGE FlexibleInstances, FunctionalDependencies #-}
+{-# LANGUAGE FlexibleInstances      #-}
+{-# LANGUAGE FunctionalDependencies #-}
 -----------------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.VectorSpace
