@@ -17,19 +17,20 @@
 --
 --------------------------------------------------------------------------------
 module Data.Vector3
-  ( Vector3            -- Abstract, instance of VectorSpace
-  , vector3            -- :: RealFloat a => a -> a -> a -> Vector3 a
-  , vector3X           -- :: RealFloat a => Vector3 a -> a
-  , vector3Y           -- :: RealFloat a => Vector3 a -> a
-  , vector3Z           -- :: RealFloat a => Vector3 a -> a
-  , vector3XYZ         -- :: RealFloat a => Vector3 a -> (a, a, a)
-  , vector3Spherical   -- :: RealFloat a => a -> a -> a -> Vector3 a
-  , vector3Rho         -- :: RealFloat a => Vector3 a -> a
-  , vector3Theta       -- :: RealFloat a => Vector3 a -> a
-  , vector3Phi         -- :: RealFloat a => Vector3 a -> a
-  , vector3RhoThetaPhi -- :: RealFloat a => Vector3 a -> (a, a, a)
-  , vector3Rotate      -- :: RealFloat a => a -> a -> Vector3 a -> Vector3 a
-  ) where
+    ( Vector3            -- Abstract, instance of VectorSpace
+    , vector3            -- :: RealFloat a => a -> a -> a -> Vector3 a
+    , vector3X           -- :: RealFloat a => Vector3 a -> a
+    , vector3Y           -- :: RealFloat a => Vector3 a -> a
+    , vector3Z           -- :: RealFloat a => Vector3 a -> a
+    , vector3XYZ         -- :: RealFloat a => Vector3 a -> (a, a, a)
+    , vector3Spherical   -- :: RealFloat a => a -> a -> a -> Vector3 a
+    , vector3Rho         -- :: RealFloat a => Vector3 a -> a
+    , vector3Theta       -- :: RealFloat a => Vector3 a -> a
+    , vector3Phi         -- :: RealFloat a => Vector3 a -> a
+    , vector3RhoThetaPhi -- :: RealFloat a => Vector3 a -> (a, a, a)
+    , vector3Rotate      -- :: RealFloat a => a -> a -> Vector3 a -> Vector3 a
+    )
+  where
 
 -- External imports
 import Control.DeepSeq (NFData(..))
