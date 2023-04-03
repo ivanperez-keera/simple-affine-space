@@ -16,11 +16,11 @@
 -- 2D point abstraction (R^2).
 --
 -----------------------------------------------------------------------------------------
-module Data.Point2 (
-    Point2(..), -- Non-abstract, instance of AffineSpace
-    point2X,    -- :: RealFloat a => Point2 a -> a
-    point2Y     -- :: RealFloat a => Point2 a -> a
-) where
+module Data.Point2
+  ( Point2(..) -- Non-abstract, instance of AffineSpace
+  , point2X    -- :: RealFloat a => Point2 a -> a
+  , point2Y    -- :: RealFloat a => Point2 a -> a
+  ) where
 
 -- External imports
 import Control.DeepSeq (NFData(..))
