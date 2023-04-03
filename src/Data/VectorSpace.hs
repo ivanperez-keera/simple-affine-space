@@ -15,14 +15,14 @@
 --
 -- There can be other implementations of VectorSpace, for example you could
 -- implement it with linear like this:
--- 
+--
 -- @
 -- {-# LANGUAGE FlexibleInstances     #-}
 -- {-# LANGUAGE MultiParamTypeClasses #-}
--- 
+--
 -- import FRP.Yampa
 -- import Linear    as L
--- 
+--
 -- instance (Eq a, Floating a) => VectorSpace (V2 a) a where
 --   zeroVector = L.zero
 --   (*^) = (L.*^)
@@ -32,7 +32,7 @@
 --   (^-^) = (L.^-^)
 --   dot = L.dot
 -- @
--- 
+--
 -- Using this you could benefit from more advanced vector operators and the
 -- improved performance linear brings while keeping a simple type class
 -- interface with few dependencies.
