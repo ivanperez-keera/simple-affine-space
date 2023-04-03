@@ -58,13 +58,13 @@ point3Z (Point3 _ _ z) = z
 -- * Affine space instance
 
 instance RealFloat a => AffineSpace (Point3 a) (Vector3 a) a where
-    origin = Point3 0 0 0
+  origin = Point3 0 0 0
 
-    (Point3 x y z) .+^ v =
-        Point3 (x + vector3X v) (y + vector3Y v) (z + vector3Z v)
+  (Point3 x y z) .+^ v =
+    Point3 (x + vector3X v) (y + vector3Y v) (z + vector3Z v)
 
-    (Point3 x y z) .-^ v =
-        Point3 (x - vector3X v) (y - vector3Y v) (z - vector3Z v)
+  (Point3 x y z) .-^ v =
+    Point3 (x - vector3X v) (y - vector3Y v) (z - vector3Z v)
 
-    (Point3 x1 y1 z1) .-. (Point3 x2 y2 z2) =
-        vector3 (x1 - x2) (y1 - y2) (z1 - z2)
+  (Point3 x1 y1 z1) .-. (Point3 x2 y2 z2) =
+    vector3 (x1 - x2) (y1 - y2) (z1 - z2)
