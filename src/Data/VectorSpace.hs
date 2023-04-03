@@ -142,66 +142,69 @@ instance VectorSpace Double Double where
 
 
 -- | Vector space instance for pairs of 'Floating' point numbers.
-instance (Eq a, Floating a) => VectorSpace (a,a) a where
-  zeroVector = (0,0)
+instance (Eq a, Floating a) => VectorSpace (a, a) a where
+  zeroVector = (0, 0)
 
-  a *^ (x,y) = (a * x, a * y)
+  a *^ (x, y) = (a * x, a * y)
 
-  (x,y) ^/ a = (x / a, y / a)
+  (x, y) ^/ a = (x / a, y / a)
 
-  negateVector (x,y) = (-x, -y)
+  negateVector (x, y) = (-x, -y)
 
-  (x1,y1) ^+^ (x2,y2) = (x1 + x2, y1 + y2)
+  (x1, y1) ^+^ (x2, y2) = (x1 + x2, y1 + y2)
 
-  (x1,y1) ^-^ (x2,y2) = (x1 - x2, y1 - y2)
+  (x1, y1) ^-^ (x2, y2) = (x1 - x2, y1 - y2)
 
-  (x1,y1) `dot` (x2,y2) = x1 * x2 + y1 * y2
+  (x1, y1) `dot` (x2, y2) = x1 * x2 + y1 * y2
 
 -- | Vector space instance for triplets of 'Floating' point numbers.
-instance (Eq a, Floating a) => VectorSpace (a,a,a) a where
-  zeroVector = (0,0,0)
+instance (Eq a, Floating a) => VectorSpace (a, a, a) a where
+  zeroVector = (0, 0, 0)
 
-  a *^ (x,y,z) = (a * x, a * y, a * z)
+  a *^ (x, y, z) = (a * x, a * y, a * z)
 
-  (x,y,z) ^/ a = (x / a, y / a, z / a)
+  (x, y, z) ^/ a = (x / a, y / a, z / a)
 
-  negateVector (x,y,z) = (-x, -y, -z)
+  negateVector (x, y, z) = (-x, -y, -z)
 
-  (x1,y1,z1) ^+^ (x2,y2,z2) = (x1+x2, y1+y2, z1+z2)
+  (x1, y1, z1) ^+^ (x2, y2, z2) = (x1+x2, y1+y2, z1+z2)
 
-  (x1,y1,z1) ^-^ (x2,y2,z2) = (x1-x2, y1-y2, z1-z2)
+  (x1, y1, z1) ^-^ (x2, y2, z2) = (x1-x2, y1-y2, z1-z2)
 
-  (x1,y1,z1) `dot` (x2,y2,z2) = x1 * x2 + y1 * y2 + z1 * z2
+  (x1, y1, z1) `dot` (x2, y2, z2) = x1 * x2 + y1 * y2 + z1 * z2
 
 -- | Vector space instance for tuples with four 'Floating' point numbers.
-instance (Eq a, Floating a) => VectorSpace (a,a,a,a) a where
-  zeroVector = (0,0,0,0)
+instance (Eq a, Floating a) => VectorSpace (a, a, a, a) a where
+  zeroVector = (0, 0, 0, 0)
 
-  a *^ (x,y,z,u) = (a * x, a * y, a * z, a * u)
+  a *^ (x, y, z, u) = (a * x, a * y, a * z, a * u)
 
-  (x,y,z,u) ^/ a = (x / a, y / a, z / a, u / a)
+  (x, y, z, u) ^/ a = (x / a, y / a, z / a, u / a)
 
-  negateVector (x,y,z,u) = (-x, -y, -z, -u)
+  negateVector (x, y, z, u) = (-x, -y, -z, -u)
 
-  (x1,y1,z1,u1) ^+^ (x2,y2,z2,u2) = (x1+x2, y1+y2, z1+z2, u1+u2)
+  (x1, y1, z1, u1) ^+^ (x2, y2, z2, u2) = (x1+x2, y1+y2, z1+z2, u1+u2)
 
-  (x1,y1,z1,u1) ^-^ (x2,y2,z2,u2) = (x1-x2, y1-y2, z1-z2, u1-u2)
+  (x1, y1, z1, u1) ^-^ (x2, y2, z2, u2) = (x1-x2, y1-y2, z1-z2, u1-u2)
 
-  (x1,y1,z1,u1) `dot` (x2,y2,z2,u2) = x1 * x2 + y1 * y2 + z1 * z2 + u1 * u2
+  (x1, y1, z1, u1) `dot` (x2, y2, z2, u2) =
+    x1 * x2 + y1 * y2 + z1 * z2 + u1 * u2
 
 -- | Vector space instance for tuples with five 'Floating' point numbers.
-instance (Eq a, Floating a) => VectorSpace (a,a,a,a,a) a where
-  zeroVector = (0,0,0,0,0)
+instance (Eq a, Floating a) => VectorSpace (a, a, a, a, a) a where
+  zeroVector = (0, 0, 0, 0, 0)
 
-  a *^ (x,y,z,u,v) = (a * x, a * y, a * z, a * u, a * v)
+  a *^ (x, y, z, u, v) = (a * x, a * y, a * z, a * u, a * v)
 
-  (x,y,z,u,v) ^/ a = (x / a, y / a, z / a, u / a, v / a)
+  (x, y, z, u, v) ^/ a = (x / a, y / a, z / a, u / a, v / a)
 
-  negateVector (x,y,z,u,v) = (-x, -y, -z, -u, -v)
+  negateVector (x, y, z, u, v) = (-x, -y, -z, -u, -v)
 
-  (x1,y1,z1,u1,v1) ^+^ (x2,y2,z2,u2,v2) = (x1+x2, y1+y2, z1+z2, u1+u2, v1+v2)
+  (x1, y1, z1, u1, v1) ^+^ (x2, y2, z2, u2, v2) =
+    (x1+x2, y1+y2, z1+z2, u1+u2, v1+v2)
 
-  (x1,y1,z1,u1,v1) ^-^ (x2,y2,z2,u2,v2) = (x1-x2, y1-y2, z1-z2, u1-u2, v1-v2)
+  (x1, y1, z1, u1, v1) ^-^ (x2, y2, z2, u2, v2) =
+    (x1-x2, y1-y2, z1-z2, u1-u2, v1-v2)
 
-  (x1,y1,z1,u1,v1) `dot` (x2,y2,z2,u2,v2) =
+  (x1, y1, z1, u1, v1) `dot` (x2, y2, z2, u2, v2) =
     x1 * x2 + y1 * y2 + z1 * z2 + u1 * u2 + v1 * v2
