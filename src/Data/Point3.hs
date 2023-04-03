@@ -17,11 +17,12 @@
 --
 --------------------------------------------------------------------------------
 module Data.Point3
-  ( Point3(..) -- Non-abstract, instance of AffineSpace
-  , point3X    -- :: RealFloat a => Point3 a -> a
-  , point3Y    -- :: RealFloat a => Point3 a -> a
-  , point3Z    -- :: RealFloat a => Point3 a -> a
-  ) where
+    ( Point3(..) -- Non-abstract, instance of AffineSpace
+    , point3X    -- :: RealFloat a => Point3 a -> a
+    , point3Y    -- :: RealFloat a => Point3 a -> a
+    , point3Z    -- :: RealFloat a => Point3 a -> a
+    )
+  where
 
 -- External imports
 import Control.DeepSeq (NFData(..))
