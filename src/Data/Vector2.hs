@@ -3,7 +3,7 @@
 {-# LANGUAGE MultiParamTypeClasses     #-}
 {-# LANGUAGE StandaloneDeriving        #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Vector2
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -15,7 +15,7 @@
 --
 -- 2D vector abstraction (R^2).
 --
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 module Data.Vector2
   ( Vector2            -- Abstract, instance of VectorSpace
   , vector2            -- :: RealFloat a => a -> a -> Vector2 a
