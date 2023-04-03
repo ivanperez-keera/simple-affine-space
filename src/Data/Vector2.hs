@@ -29,8 +29,10 @@ module Data.Vector2 (
     vector2Rotate       -- :: RealFloat a => a -> Vector2 a -> Vector2 a
 ) where
 
+-- External imports
 import Control.DeepSeq (NFData(..))
 
+-- Internal imports
 import Data.VectorSpace
 
 -- * 2D vector, constructors and selectors
