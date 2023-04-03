@@ -1,4 +1,5 @@
-{-# LANGUAGE FlexibleInstances, FunctionalDependencies #-}
+{-# LANGUAGE FlexibleInstances      #-}
+{-# LANGUAGE FunctionalDependencies #-}
 -----------------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.AffineSpace
