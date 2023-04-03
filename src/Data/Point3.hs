@@ -23,8 +23,10 @@ module Data.Point3 (
     point3Z     -- :: RealFloat a => Point3 a -> a
 ) where
 
+-- External imports
 import Control.DeepSeq (NFData(..))
 
+-- Internal imports
 import Data.VectorSpace ()
 import Data.AffineSpace
 import Data.Vector3
