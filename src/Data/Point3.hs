@@ -27,9 +27,9 @@ module Data.Point3 (
 import Control.DeepSeq (NFData(..))
 
 -- Internal imports
-import Data.VectorSpace ()
 import Data.AffineSpace
 import Data.Vector3
+import Data.VectorSpace ()
 
 -- * 3D point, constructors and selectors
 
