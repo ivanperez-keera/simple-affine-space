@@ -1,6 +1,6 @@
 {-# LANGUAGE FlexibleInstances      #-}
 {-# LANGUAGE FunctionalDependencies #-}
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.AffineSpace
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -12,7 +12,7 @@
 --
 -- Affine space type relation.
 --
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 module Data.AffineSpace where
 
 -- Internal imports
