@@ -15,6 +15,7 @@
 -----------------------------------------------------------------------------------------
 module Data.AffineSpace where
 
+-- Internal imports
 import Data.VectorSpace
 
 infix 6 .+^, .-^, .-.
