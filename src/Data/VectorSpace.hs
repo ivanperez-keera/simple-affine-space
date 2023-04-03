@@ -116,7 +116,7 @@ instance VectorSpace Float Float where
 
   x ^/ a = x / a
 
-  negateVector x = (-x)
+  negateVector x = -x
 
   x1 ^+^ x2 = x1 + x2
 
@@ -132,7 +132,7 @@ instance VectorSpace Double Double where
 
   x ^/ a = x / a
 
-  negateVector x = (-x)
+  negateVector x = -x
 
   x1 ^+^ x2 = x1 + x2
 
