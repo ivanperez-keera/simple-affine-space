@@ -67,7 +67,7 @@ class VectorSpace v a | v -> a where
   -- | Division by a scalar.
   (^/) :: v -> a -> v
   default (^/) :: Fractional a => v -> a -> v
-  v ^/ a = (1/a) *^ v
+  v ^/ a = (1 / a) *^ v
 
   -- | Vector addition
   (^+^) :: v -> v -> v
@@ -167,9 +167,9 @@ instance (Eq a, Floating a) => VectorSpace (a, a, a) a where
 
   negateVector (x, y, z) = (-x, -y, -z)
 
-  (x1, y1, z1) ^+^ (x2, y2, z2) = (x1+x2, y1+y2, z1+z2)
+  (x1, y1, z1) ^+^ (x2, y2, z2) = (x1 + x2, y1 + y2, z1 + z2)
 
-  (x1, y1, z1) ^-^ (x2, y2, z2) = (x1-x2, y1-y2, z1-z2)
+  (x1, y1, z1) ^-^ (x2, y2, z2) = (x1 - x2, y1 - y2, z1 - z2)
 
   (x1, y1, z1) `dot` (x2, y2, z2) = x1 * x2 + y1 * y2 + z1 * z2
 
@@ -183,9 +183,9 @@ instance (Eq a, Floating a) => VectorSpace (a, a, a, a) a where
 
   negateVector (x, y, z, u) = (-x, -y, -z, -u)
 
-  (x1, y1, z1, u1) ^+^ (x2, y2, z2, u2) = (x1+x2, y1+y2, z1+z2, u1+u2)
+  (x1, y1, z1, u1) ^+^ (x2, y2, z2, u2) = (x1 + x2, y1 + y2, z1 + z2, u1 + u2)
 
-  (x1, y1, z1, u1) ^-^ (x2, y2, z2, u2) = (x1-x2, y1-y2, z1-z2, u1-u2)
+  (x1, y1, z1, u1) ^-^ (x2, y2, z2, u2) = (x1 - x2, y1 - y2, z1 - z2, u1 - u2)
 
   (x1, y1, z1, u1) `dot` (x2, y2, z2, u2) =
     x1 * x2 + y1 * y2 + z1 * z2 + u1 * u2
@@ -201,10 +201,10 @@ instance (Eq a, Floating a) => VectorSpace (a, a, a, a, a) a where
   negateVector (x, y, z, u, v) = (-x, -y, -z, -u, -v)
 
   (x1, y1, z1, u1, v1) ^+^ (x2, y2, z2, u2, v2) =
-    (x1+x2, y1+y2, z1+z2, u1+u2, v1+v2)
+    (x1 + x2, y1 + y2, z1 + z2, u1 + u2, v1 + v2)
 
   (x1, y1, z1, u1, v1) ^-^ (x2, y2, z2, u2, v2) =
-    (x1-x2, y1-y2, z1-z2, u1-u2, v1-v2)
+    (x1 - x2, y1 - y2, z1 - z2, u1 - u2, v1 - v2)
 
   (x1, y1, z1, u1, v1) `dot` (x2, y2, z2, u2, v2) =
     x1 * x2 + y1 * y2 + z1 * z2 + u1 * u2 + v1 * v2
