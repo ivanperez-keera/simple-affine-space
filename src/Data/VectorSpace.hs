@@ -1,7 +1,7 @@
 {-# LANGUAGE DefaultSignatures      #-}
 {-# LANGUAGE FlexibleInstances      #-}
 {-# LANGUAGE FunctionalDependencies #-}
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.VectorSpace
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -36,7 +36,7 @@
 -- Using this you could benefit from more advanced vector operators and the
 -- improved performance linear brings while keeping a simple type class
 -- interface with few dependencies.
------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 module Data.VectorSpace where
 
 infixr *^
