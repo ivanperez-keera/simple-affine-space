@@ -13,7 +13,6 @@
 -- 3D point abstraction (R^3).
 --
 -----------------------------------------------------------------------------------------
-
 module Data.Point3 (
     Point3(..), -- Non-abstract, instance of AffineSpace
     point3X,    -- :: RealFloat a => Point3 a -> a
