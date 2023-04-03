@@ -31,8 +31,10 @@ module Data.Vector3 (
     vector3Rotate       -- :: RealFloat a => a -> a -> Vector3 a -> Vector3 a
 ) where
 
+-- External imports
 import Control.DeepSeq (NFData(..))
 
+-- Internal imports
 import Data.VectorSpace
 
 -- * 3D vector, constructors and selectors
