@@ -42,10 +42,6 @@ infixl ^/
 infix 7 `dot`
 infixl 6 ^+^, ^-^
 
--- Maybe norm and normalize should not be class methods, in which case
--- the constraint on the coefficient space (a) should (or, at least, could)
--- be Fractional (roughly a Field) rather than Floating.
-
 -- | Vector space type relation.
 --
 --   A vector space is a set (type) closed under addition and multiplication by
