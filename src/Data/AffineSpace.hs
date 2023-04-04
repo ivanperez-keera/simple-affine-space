@@ -17,13 +17,6 @@ import Data.VectorSpace
 
 infix 6 .+^, .-^, .-.
 
--- Maybe origin should not be a class method, even though an origin
--- can be associated with any affine space.
--- Maybe distance should not be a class method, in which case the constraint
--- on the coefficient space (a) could be Fractional (i.e., a Field), which
--- seems closer to the mathematical definition of affine space, provided
--- the constraint on the coefficient space for VectorSpace is also Fractional.
-
 -- | Affine Space type relation.
 --
 -- An affine space is a set (type) @p@, and an associated vector space @v@ over
