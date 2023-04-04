@@ -3,7 +3,6 @@
 {-# LANGUAGE MultiParamTypeClasses     #-}
 {-# LANGUAGE StandaloneDeriving        #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
---------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Point3
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -14,8 +13,6 @@
 -- Portability :  non-portable (GHC extensions)
 --
 -- 3D point abstraction (R^3).
---
---------------------------------------------------------------------------------
 module Data.Point3
     ( Point3(..) -- Non-abstract, instance of AffineSpace
     , point3X    -- :: RealFloat a => Point3 a -> a
