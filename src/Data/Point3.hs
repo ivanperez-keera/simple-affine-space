@@ -41,15 +41,15 @@ deriving instance Show a => Show (Point3 a)
 instance NFData a => NFData (Point3 a) where
   rnf (Point3 x y z) = rnf x `seq` rnf y `seq` rnf z `seq` ()
 
--- | X coodinate of a 3D point.
+-- | X coordinate of a 3D point.
 point3X :: RealFloat a => Point3 a -> a
 point3X (Point3 x _ _) = x
 
--- | Y coodinate of a 3D point.
+-- | Y coordinate of a 3D point.
 point3Y :: RealFloat a => Point3 a -> a
 point3Y (Point3 _ y _) = y
 
--- | Z coodinate of a 3D point.
+-- | Z coordinate of a 3D point.
 point3Z :: RealFloat a => Point3 a -> a
 point3Z (Point3 _ _ z) = z
 
