@@ -18,7 +18,7 @@ import Data.VectorSpace
 infix 6 .+^, .-^, .-.
 
 -- Maybe origin should not be a class method, even though an origin
--- can be assocoated with any affine space.
+-- can be associated with any affine space.
 -- Maybe distance should not be a class method, in which case the constraint
 -- on the coefficient space (a) could be Fractional (i.e., a Field), which
 -- seems closer to the mathematical definition of affine space, provided
