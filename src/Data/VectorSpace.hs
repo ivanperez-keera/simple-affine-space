@@ -54,7 +54,6 @@ infixl 6 ^+^, ^-^
 --
 --   The encoding uses a type class |VectorSpace| @v a@, where @v@ represents
 --   the type of the vectors and @a@ represents the types of the scalars.
-
 class VectorSpace v a | v -> a where
 
   -- | Vector with no magnitude (unit for addition).
