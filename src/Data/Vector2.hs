@@ -1,6 +1,8 @@
+{-# LANGUAGE ExistentialQuantification #-}
+{-# LANGUAGE FlexibleInstances         #-}
+{-# LANGUAGE MultiParamTypeClasses     #-}
+{-# LANGUAGE StandaloneDeriving        #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
-{-# LANGUAGE ExistentialQuantification, MultiParamTypeClasses, FlexibleInstances, StandaloneDeriving #-}
------------------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Vector2
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -11,24 +13,24 @@
 -- Portability :  non-portable (GHC extensions)
 --
 -- 2D vector abstraction (R^2).
---
------------------------------------------------------------------------------------------
+module Data.Vector2
+    ( Vector2         -- Abstract, instance of VectorSpace
+    , vector2         -- :: RealFloat a => a -> a -> Vector2 a
+    , vector2X        -- :: RealFloat a => Vector2 a -> a
+    , vector2Y        -- :: RealFloat a => Vector2 a -> a
+    , vector2XY       -- :: RealFloat a => Vector2 a -> (a, a)
+    , vector2Polar    -- :: RealFloat a => a -> a -> Vector2 a
+    , vector2Rho      -- :: RealFloat a => Vector2 a -> a
+    , vector2Theta    -- :: RealFloat a => Vector2 a -> a
+    , vector2RhoTheta -- :: RealFloat a => Vector2 a -> (a, a)
+    , vector2Rotate   -- :: RealFloat a => a -> Vector2 a -> Vector2 a
+    )
+  where
 
-module Data.Vector2 (
-    Vector2,            -- Abstract, instance of VectorSpace
-    vector2,            -- :: RealFloat a => a -> a -> Vector2 a
-    vector2X,           -- :: RealFloat a => Vector2 a -> a
-    vector2Y,           -- :: RealFloat a => Vector2 a -> a
-    vector2XY,          -- :: RealFloat a => Vector2 a -> (a, a)
-    vector2Polar,       -- :: RealFloat a => a -> a -> Vector2 a
-    vector2Rho,         -- :: RealFloat a => Vector2 a -> a
-    vector2Theta,       -- :: RealFloat a => Vector2 a -> a
-    vector2RhoTheta,    -- :: RealFloat a => Vector2 a -> (a, a)
-    vector2Rotate       -- :: RealFloat a => a -> Vector2 a -> Vector2 a
-) where
-
+-- External imports
 import Control.DeepSeq (NFData(..))
 
+-- Internal imports
 import Data.VectorSpace
 
 -- * 2D vector, constructors and selectors
@@ -84,20 +86,19 @@ vector2RhoTheta v = (vector2Rho v, vector2Theta v)
 -- * Vector space instance
 
 instance RealFloat a => VectorSpace (Vector2 a) a where
-    zeroVector = Vector2 0 0
+  zeroVector = Vector2 0 0
 
-    a *^ (Vector2 x y) = Vector2 (a * x) (a * y)
+  a *^ (Vector2 x y) = Vector2 (a * x) (a * y)
 
-    (Vector2 x y) ^/ a = Vector2 (x / a) (y / a)
+  (Vector2 x y) ^/ a = Vector2 (x / a) (y / a)
 
-    negateVector (Vector2 x y) = (Vector2 (-x) (-y))
+  negateVector (Vector2 x y) = Vector2 (-x) (-y)
 
-    (Vector2 x1 y1) ^+^ (Vector2 x2 y2) = Vector2 (x1 + x2) (y1 + y2)
+  (Vector2 x1 y1) ^+^ (Vector2 x2 y2) = Vector2 (x1 + x2) (y1 + y2)
 
-    (Vector2 x1 y1) ^-^ (Vector2 x2 y2) = Vector2 (x1 - x2) (y1 - y2)
+  (Vector2 x1 y1) ^-^ (Vector2 x2 y2) = Vector2 (x1 - x2) (y1 - y2)
 
-    (Vector2 x1 y1) `dot` (Vector2 x2 y2) = x1 * x2 + y1 * y2
-
+  (Vector2 x1 y1) `dot` (Vector2 x2 y2) = x1 * x2 + y1 * y2
 
 -- * Additional operations
 

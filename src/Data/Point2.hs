@@ -1,6 +1,8 @@
+{-# LANGUAGE ExistentialQuantification #-}
+{-# LANGUAGE FlexibleInstances         #-}
+{-# LANGUAGE MultiParamTypeClasses     #-}
+{-# LANGUAGE StandaloneDeriving        #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
-{-# LANGUAGE ExistentialQuantification, MultiParamTypeClasses, FlexibleInstances, StandaloneDeriving #-}
------------------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Point2
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -11,20 +13,20 @@
 -- Portability :  non-portable (GHC extensions)
 --
 -- 2D point abstraction (R^2).
---
------------------------------------------------------------------------------------------
+module Data.Point2
+    ( Point2(..) -- Non-abstract, instance of AffineSpace
+    , point2X    -- :: RealFloat a => Point2 a -> a
+    , point2Y    -- :: RealFloat a => Point2 a -> a
+    )
+  where
 
-module Data.Point2 (
-    Point2(..), -- Non-abstract, instance of AffineSpace
-    point2X,    -- :: RealFloat a => Point2 a -> a
-    point2Y     -- :: RealFloat a => Point2 a -> a
-) where
-
+-- External imports
 import Control.DeepSeq (NFData(..))
 
-import Data.VectorSpace ()
+-- Internal imports
 import Data.AffineSpace
 import Data.Vector2
+import Data.VectorSpace ()
 
 -- * 2D point, constructors and selectors
 
@@ -49,10 +51,10 @@ point2Y (Point2 _ y) = y
 -- * Affine space instance
 
 instance RealFloat a => AffineSpace (Point2 a) (Vector2 a) a where
-    origin = Point2 0 0
+  origin = Point2 0 0
 
-    (Point2 x y) .+^ v = Point2 (x + vector2X v) (y + vector2Y v)
+  (Point2 x y) .+^ v = Point2 (x + vector2X v) (y + vector2Y v)
 
-    (Point2 x y) .-^ v = Point2 (x - vector2X v) (y - vector2Y v)
+  (Point2 x y) .-^ v = Point2 (x - vector2X v) (y - vector2Y v)
 
-    (Point2 x1 y1) .-. (Point2 x2 y2) = vector2 (x1 - x2) (y1 - y2)
+  (Point2 x1 y1) .-. (Point2 x2 y2) = vector2 (x1 - x2) (y1 - y2)
