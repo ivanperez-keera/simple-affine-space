@@ -3,7 +3,6 @@
 {-# LANGUAGE MultiParamTypeClasses     #-}
 {-# LANGUAGE StandaloneDeriving        #-}
 {-# OPTIONS_GHC -fno-warn-warnings-deprecations #-}
---------------------------------------------------------------------------------
 -- |
 -- Module      :  Data.Point2
 -- Copyright   :  (c) Antony Courtney and Henrik Nilsson, Yale University, 2003
@@ -14,8 +13,6 @@
 -- Portability :  non-portable (GHC extensions)
 --
 -- 2D point abstraction (R^2).
---
---------------------------------------------------------------------------------
 module Data.Point2
     ( Point2(..) -- Non-abstract, instance of AffineSpace
     , point2X    -- :: RealFloat a => Point2 a -> a
