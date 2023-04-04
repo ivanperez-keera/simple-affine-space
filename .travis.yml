@@ -18,10 +18,10 @@ ghc:
 install:
   - travis_retry cabal install alex happy
   - export PATH="$HOME/.cabal/bin:$PATH"
-  - travis_retry cabal install --enable-tests --only-dependencies
+  - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install --enable-tests --only-dependencies ; else cabal install --only-dependencies ; fi
 
 script:
-  - travis_retry cabal install --enable-tests -j1
+  - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install --enable-tests -j1 ; else cabal install -j1 ; fi
 
 after_script:
   - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install --run-tests -j1 ; fi
