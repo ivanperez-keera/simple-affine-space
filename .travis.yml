@@ -4,10 +4,6 @@
 language: haskell
 
 ghc:
-  - "7.6.3"
-  - "7.8.4"
-  - "7.10.3"
-  - "8.0.2"
   - "8.2.2"
   - "8.4.4"
   - "8.6.5"
@@ -16,12 +12,11 @@ ghc:
   - "9.0.1"
 
 install:
-  - travis_retry cabal install alex happy
   - export PATH="$HOME/.cabal/bin:$PATH"
-  - travis_retry cabal install --enable-tests --only-dependencies
+  - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install alex happy; cabal install --enable-tests --only-dependencies ; else cabal install --only-dependencies ; fi
 
 script:
-  - travis_retry cabal install --enable-tests -j1
+  - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install --enable-tests -j1 ; else cabal install -j1 ; fi
 
 after_script:
   - if [ "${TRAVIS_HASKELL_VERSION}" == "8.4.4" ]; then cabal install --run-tests -j1 ; fi
